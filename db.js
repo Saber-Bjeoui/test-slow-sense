@@ -18,6 +18,9 @@ const config = {
   },
 }
 
-const connection = new Connection(config)
+module.exports.getConnection = () => {
+  console.log('Connecting to database...')
+  return new Connection(config)
+}
 
-exports.db = connection
+

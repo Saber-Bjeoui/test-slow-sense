@@ -1,14 +1,24 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
-const { getShapes } = require('./getShapes')
+const { getShapes } = require('./getShapes');
+const { shape } = require('./shape.model');
 
 
-app.get('/', async (req, res) => {
+app.get('/shapes', async (req, res) => {
+
+  try {
+    let shapes = await getShapes()
+
+    shapes = shapes.map((rawData) => shape(rawData));
+    
+    res.send(shapes)
+
+  } catch (error) {
+    res.status(500).send({message: "Oops something wrong happened!!"})
+  }
   
-  let shapes = await getShapes()
   
-  res.send(shapes)
 })
 
 app.listen(port, () => {
