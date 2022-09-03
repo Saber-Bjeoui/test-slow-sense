@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { ShapeComponent } from './shape/shape.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShapeComponent
   ],
   imports: [
     BrowserModule,
