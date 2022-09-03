@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
       
         db.execSql(request)
       }
-  res.send(executeStatement())
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {

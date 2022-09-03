@@ -4,7 +4,6 @@ const port = process.env.PORT || 3000
 const db = require('./db');
 
 
-
 app.get('/', (req, res) => {
     
     function executeStatement () {
@@ -29,7 +28,7 @@ app.get('/', (req, res) => {
       
         db.execSql(request)
       }
-  res.send(executeStatement())
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {
