@@ -1,1 +1,8 @@
-<p>shape works!</p>
+<div #shape
+  class="base-shape"
+  [ngClass]="{
+    circle: shapeType === EShapeType.CIRCLE,
+    rectangle: shapeType === EShapeType.RECTANGLE,
+    text: shapeType === EShapeType.TEXT
+  }"
+></div>
