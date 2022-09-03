@@ -1,8 +1,12 @@
 <div #shape
   class="base-shape"
+  (click)="showPopup()"
+  [style.z-index]="order"
   [ngClass]="{
     circle: shapeType === EShapeType.CIRCLE,
     rectangle: shapeType === EShapeType.RECTANGLE,
     text: shapeType === EShapeType.TEXT
   }"
-></div>
+>
+  <span class=""></span>
+</div>
