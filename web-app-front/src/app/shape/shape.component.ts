@@ -54,7 +54,7 @@ export class ShapeComponent implements OnInit, AfterViewInit {
 
    
 
-    this.shape.nativeElement.textContent = this.text
+    //this.shape.nativeElement.textContent = this.text
   }
 
   showPopup() {
