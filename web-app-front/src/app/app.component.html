@@ -1,10 +1,12 @@
 <div class="container">
-  <app-shape
-    [shapeType]="1"
-    [height]="200"
-    [width]="100"
-    [positionX]="300"
-    [positionY]="400"
-    [text]="'this a text'"
-  ></app-shape>
+  <ng-container *ngFor="let shape of shapes$ | async">
+    <app-shape
+      [shapeType]="shape.formsTypeId"
+      [height]="shape.height"
+      [width]="shape.width"
+      [positionX]="shape.positionX"
+      [positionY]="shape.positionY"
+      [text]="shape.text"
+    ></app-shape>
+  </ng-container>
 </div>

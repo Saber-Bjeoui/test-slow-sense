@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,  } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { ShapeComponent } from './shape/shape.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,7 @@ import { ShapeComponent } from './shape/shape.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule
   ],
   providers: [],

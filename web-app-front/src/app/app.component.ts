@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpService } from './http-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'web-app-front';
+
+
+  shapes$ = this.httpService.getShapes() as Observable<any>;
+
+  constructor(private httpService: HttpService) {}
 }

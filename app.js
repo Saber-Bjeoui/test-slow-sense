@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = process.env.PORT || 3000
 const { getShapes } = require('./getShapes');
 const { shape } = require('./shape.model');
+
+app.use(cors())
 
 
 app.get('/shapes', async (req, res) => {
